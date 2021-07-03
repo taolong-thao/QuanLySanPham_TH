@@ -1,0 +1,5 @@
+
+j	java:S116"NRename this field "SDT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾„ƒ±8¡çÌÓ¦/
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®¼¡8ÛÆÏÓ¦/
+r	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’—¨øÿÿÿÿ8ÃĞÓ¦/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(á–Ì“
