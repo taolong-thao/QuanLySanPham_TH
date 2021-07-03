@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import Model.KhachHang;
 import Service.KhachHangSv;
 
-@WebServlet(name = "KhachHangCtrl", value = "/viewkhachhang")
+
 public class KhachHangCtrl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

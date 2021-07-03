@@ -8,6 +8,7 @@ import java.util.List;
 
 import ConnectManager.Connection;
 import Model.KhachHang;
+import java.sql.PreparedStatement;
 
 /**
  *
@@ -21,14 +22,31 @@ public class KhachHangSv {
             String sql = "Select * from khachhang";
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
-                KhachHang kh = new KhachHang(rs.getString(1), rs.getString(2),
-                        rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
+                KhachHang kh = new KhachHang(rs.getString(2),
+                        rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6));
                 list.add(kh);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return list;
+    }
+    public KhachHang dkKhachHang(String tenKh, String diaChi, String SDT, String ngSinh, int taiKhoan)
+    {
+        KhachHang a = new KhachHang(tenKh, diaChi, SDT, ngSinh, taiKhoan);
+        String query = "insert into khachhang values (?, ?, ?, ?, ?)";
+        try
+        {
+            PreparedStatement ps = Connection.connection().prepareStatement(query);
+            ps.setString(1, a.getTenKh());
+            ps.setString(2, a.getDiaChi());
+            ps.setString(3, a.getSDT());
+            ps.setString(3, a.getNgSinh());
+            ps.setInt(3, a.getTaiKhoan());
+            ps.executeUpdate();
+            return a;
+        }catch(Exception e){}
+        return null;
     }
 
     public static void main(String[] args) throws SQLException {

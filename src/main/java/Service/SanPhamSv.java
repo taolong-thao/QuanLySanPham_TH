@@ -23,7 +23,7 @@ public class SanPhamSv {
             String sql = "SELECT*FROM SANPHAM";
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
-                SanPham sp = new SanPham(rs.getString(1), rs.getString(2),
+                SanPham sp = new SanPham(rs.getInt(1), rs.getString(2),
                         rs.getString(3), rs.getLong(4), rs.getInt(5));
                 list.add(sp);
             }
