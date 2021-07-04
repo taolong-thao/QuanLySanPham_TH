@@ -59,7 +59,55 @@ public class KhachHangSv {
         }
     }
 
-   
+    public KhachHang FindKh(int id) {
+        String sql = "Select*from khachhang where makh='" + id + "'";
+        try {
+            Statement st = Connection.connection().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                return new KhachHang(rs.getInt(1), rs.getString(2), rs.getString(3),
+                        rs.getString(4), rs.getString(5), rs.getInt(6));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<KhachHang> searchkh(String name) {
+        String sql = "Select*from khachhang where tenKh='" + name + "'";
+        List<KhachHang> list = new ArrayList<>();
+        try {
+            Statement st = Connection.connection().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                KhachHang a = new KhachHang(rs.getInt(1), rs.getString(2), rs.getString(3),
+                        rs.getString(4), rs.getString(5), rs.getInt(6));
+                list.add(a);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public void updateKh(int id, String nameKh, String ngSInh, String diaChi, String SDT) {
+        String sql = "update khachhang set tenkh=?,diachi=?,sdt=?,ngaysinh=? where makh=?";
+        try {
+            PreparedStatement st = Connection.connection().prepareStatement(sql);
+            st.setString(1, nameKh);
+            st.setString(2, diaChi);
+            st.setString(3, SDT);
+            st.setString(4, ngSInh);
+            st.setInt(5, id);
+            st.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static void main(String[] args) throws SQLException {
         KhachHangSv a = new KhachHangSv();
         List<KhachHang> list = a.getAll();

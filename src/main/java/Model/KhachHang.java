@@ -81,5 +81,10 @@ public class KhachHang {
         this.taiKhoan = taiKhoan;
     }
 
-
+    public KhachHang(String tenKh, String diaChi, String SDT, String ngSinh) {
+        this.tenKh = tenKh;
+        this.diaChi = diaChi;
+        this.SDT = SDT;
+        this.ngSinh = ngSinh;
+    }
 }

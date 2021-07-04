@@ -23,5 +23,6 @@
 <a href="/viewsanpham"> click view Sản Phẩm</a>
 <a href="/viewkhachhang"> click view Khách Hàng</a>
 <a href="/search">Tìm Kiếm san phẩm</a>
+<a href="/searchkh">Tìm Kiếm Khách Hàng</a>
 </body>
 </html>
