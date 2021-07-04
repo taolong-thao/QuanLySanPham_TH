@@ -10,9 +10,13 @@ public class KhachHang {
     private String diaChi;
     private String SDT;
     private String ngSinh;
-    private String taiKhoan;
+    private int taiKhoan;
 
+<<<<<<< HEAD
     public KhachHang(int maKh, String tenKh, String diaChi, String SDT, String ngSinh, String taiKhoan) {
+=======
+    public KhachHang(String tenKh, String diaChi, String SDT, String ngSinh, int taiKhoan) {
+>>>>>>> origin/main
         this.maKh = maKh;
         this.tenKh = tenKh;
         this.diaChi = diaChi;
@@ -28,8 +32,13 @@ public class KhachHang {
         return maKh;
     }
 
+<<<<<<< HEAD
     public void setMaKh(int idKh) {
         this.maKh = idKh;
+=======
+    public void setMaKh(int maKh) {
+        this.maKh = maKh;
+>>>>>>> origin/main
     }
 
     public String getTenKh() {
@@ -64,11 +73,11 @@ public class KhachHang {
         this.ngSinh = ngSinh;
     }
 
-    public String getTaiKhoan() {
+    public int getTaiKhoan() {
         return taiKhoan;
     }
 
-    public void setTaiKhoan(String taiKhoan) {
+    public void setTaiKhoan(int taiKhoan) {
         this.taiKhoan = taiKhoan;
     }
 

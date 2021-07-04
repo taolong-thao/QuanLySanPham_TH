@@ -4,8 +4,6 @@ package Controller; /**
  */
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,21 +11,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Model.KhachHang;
-import Service.KhachHangSv;
+import Model.SanPham;
+import Service.SanPhamSv;
 
-
-public class KhachHangCtrl extends HttpServlet {
+@WebServlet(name = "detail", value = "/detail")
+public class detail extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        KhachHangSv kh = new KhachHangSv();
-        try {
-            List<KhachHang> list = kh.getAll();
-            request.setAttribute("khachhang", list);
-            request.getRequestDispatcher("viewkhachhang.jsp").forward(request, response);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        int id = Integer.parseInt(request.getParameter("sp"));
+        SanPhamSv sanPhamSv = new SanPhamSv();
+        SanPham sp = sanPhamSv.FindById(id);
+        request.setAttribute("sp", sp);
+        request.getRequestDispatcher("detailsanpham.jsp").forward(request, response);
     }
 
     @Override
