@@ -20,6 +20,8 @@
     <th>SDT</th>
     <th>NGAYSINH</th>
     <th>TAIKHOAN</th>
+    <th>UPDATE</th>
+    <th>DELETE</th>
     </thead>
     <tbody>
     <c:forEach items="${khachhang}" var="list">
@@ -30,6 +32,8 @@
             <td>${list.SDT}</td>
             <td>${list.ngSinh}</td>
             <td>${list.taiKhoan}</td>
+                <%--            <td><a href="update?id=${list.maKh}">Update</a></td>--%>
+                <%--            <td><a href="delete?id=${list.maKh}">Delete</a></td>--%>
         </tr>
     </c:forEach>
     </tbody>

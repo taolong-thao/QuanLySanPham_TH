@@ -12,26 +12,9 @@
     <title>Title</title>
 </head>
 <body>
-<table border="1">
-    <thead>
-    <th>MASP</th>
-    <th>TENSP</th>
-    <th>MOTA</th>
-    <th>GIABAN</th>
-    <th>SOLUONG</th>
-    </thead>
-    <tbody>
-    <c:forEach items="${spsv}" var="list">
-        <tr>
-            <td>${list.maSp}</td>
-            <td>${list.tenSp}</td>
-            <td>${list.moTa}</td>
-            <td>${list.giaBan}</td>
-            <td>${list.soLuong}</td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
+
+<a href="/viewsanpham"> click view Sản Phẩm</a>
 <a href="/viewkhachhang"> click view Khách Hàng</a>
+<a href="/search">Tìm Kiếm san phẩm</a>
 </body>
 </html>
