@@ -32,8 +32,8 @@
             <td>${list.SDT}</td>
             <td>${list.ngSinh}</td>
             <td>${list.taiKhoan}</td>
-                <%--            <td><a href="update?id=${list.maKh}">Update</a></td>--%>
-                <%--            <td><a href="delete?id=${list.maKh}">Delete</a></td>--%>
+            <td><a href="updatekh?id=${list.maKh}">Update</a></td>
+            <td><a href="deletekh?id=${list.maKh}">Delete</a></td>
         </tr>
     </c:forEach>
     </tbody>

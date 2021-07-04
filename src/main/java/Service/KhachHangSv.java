@@ -32,34 +32,34 @@ public class KhachHangSv {
         return list;
     }
 
-    //
-//    public void deleteKh(int idKh) {
-//        String sql = "delete  from khachhang where idKh=?";
-//        try {
-//            PreparedStatement st = Connection.connection().prepareStatement(sql);
-//            st.setInt(1, idKh);
-//            st.executeUpdate();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
-    public KhachHang dkKhachHang(String tenKh, String diaChi, String SDT, String ngSinh, int taiKhoan) {
-        KhachHang a = new KhachHang(tenKh, diaChi, SDT, ngSinh, taiKhoan);
-        String query = "insert into khachhang values (?, ?, ?, ?, ?)";
+    public void deleteKh(int maKh) {
+        String sql = "delete  from khachhang where maKh=?";
         try {
-            PreparedStatement ps = Connection.connection().prepareStatement(query);
-            ps.setString(1, a.getTenKh());
-            ps.setString(2, a.getDiaChi());
-            ps.setString(3, a.getSDT());
-            ps.setString(3, a.getNgSinh());
-            ps.setInt(3, a.getTaiKhoan());
-            ps.executeUpdate();
-            return a;
-        } catch (Exception e) {
+            PreparedStatement st = Connection.connection().prepareStatement(sql);
+            st.setInt(1, maKh);
+            st.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return null;
     }
 
+    public void dkKhachHang(int makh, String tenKh, String diaChi, String SDT, String ngSinh, int taiKhoan) {
+
+        String query = "insert into khachhang values (?,?, ?, ?, ?, ?)";
+        try {
+            PreparedStatement ps = Connection.connection().prepareStatement(query);
+            ps.setInt(1, makh);
+            ps.setString(2, tenKh);
+            ps.setString(3, diaChi);
+            ps.setString(4, SDT);
+            ps.setString(5, ngSinh);
+            ps.setInt(6, taiKhoan);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
+   
     public static void main(String[] args) throws SQLException {
         KhachHangSv a = new KhachHangSv();
         List<KhachHang> list = a.getAll();

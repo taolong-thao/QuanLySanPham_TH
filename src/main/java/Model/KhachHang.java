@@ -72,10 +72,8 @@ public class KhachHang {
         this.taiKhoan = taiKhoan;
     }
 
-    public KhachHang(int anInt, String string, String rsString, String s, String string1, int rsInt) {
-    }
-
-    public KhachHang(String tenKh, String diaChi, String SDT, String ngSinh, int taiKhoan) {
+    public KhachHang(int maKh, String tenKh, String diaChi, String SDT, String ngSinh, int taiKhoan) {
+        this.maKh = maKh;
         this.tenKh = tenKh;
         this.diaChi = diaChi;
         this.SDT = SDT;

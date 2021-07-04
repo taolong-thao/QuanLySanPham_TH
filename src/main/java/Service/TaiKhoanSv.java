@@ -5,20 +5,20 @@
  */
 package Service;
 
-import ConnectManager.Connection;
-import Model.TaiKhoan;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
+
+import ConnectManager.Connection;
+import Model.TaiKhoan;
 
 /**
  *
  * @author Quang Vinh
  */
 public class TaiKhoanSv {
-    public TaiKhoan checkLogin(String username, String password)
-    {
-        try
-        {
+    public TaiKhoan checkLogin(String username, String password) {
+        try {
             String query = "select * from taikhoan where username = ? and password = ?";
             PreparedStatement ps = Connection.connection().prepareStatement(query);
             ps.setString(1, username);
@@ -28,22 +28,29 @@ public class TaiKhoanSv {
                 TaiKhoan a = new TaiKhoan(rs.getString(1), rs.getString(2));
                 return a;
             }
-        }catch(Exception e){}
+        } catch (Exception e) {
+        }
         return null;
     }
-    public TaiKhoan dkTaiKhoan(String username, String password)
-    {
-        TaiKhoan a = new TaiKhoan(username, password);
-        String query = "insert into taikhoan values (?, ?, ?)";
-        try
-        {
-            PreparedStatement ps = Connection.connection().prepareStatement(query);
-            ps.setString(1, a.getUsername());
-            ps.setString(2, a.getPassword());
-            ps.setString(3, a.getRole());
+
+
+    public TaiKhoan dkTaiKhoan(int a, String username, String password, String b) {
+        TaiKhoan taiKhoan = new TaiKhoan(a, username, password, b);
+        String query = "insert into taikhoan values (?,?, ?, ?)";
+        try {
+            PreparedStatement ps = Connection.connection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, taiKhoan.getId());
+            ps.setString(2, taiKhoan.getUsername());
+            ps.setString(3, taiKhoan.getPassword());
+            ps.setString(4, taiKhoan.getRole());
             ps.executeUpdate();
-            return a;
-        }catch(Exception e){}
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) {
+                taiKhoan.setKey(rs.getInt(1));
+            }
+            return taiKhoan;
+        } catch (Exception e) {
+        }
         return null;
     }
 }

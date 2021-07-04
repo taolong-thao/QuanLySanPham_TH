@@ -14,10 +14,29 @@ public class TaiKhoan {
     private String username;
     private String password;
     private String role;
-    public TaiKhoan(){}
+    private int key;
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+
+    public TaiKhoan() {
+    }
+
     public TaiKhoan(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public TaiKhoan(int id, String username, String password, String role) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.role = role;
     }
 
     public int getId() {
@@ -51,5 +70,5 @@ public class TaiKhoan {
     public void setRole(String role) {
         this.role = role;
     }
-    
+
 }

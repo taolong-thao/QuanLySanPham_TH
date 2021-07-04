@@ -14,9 +14,9 @@
 <body>
 <table align="center">
     <tr>
-        <td><a href="DangNhap">Login</a>
+        <td><a href="/DangNhap.jsp">Login</a>
         </td>
-        <td><a href="DangKy">Register</a>
+        <td><a href="/DangKy.jsp">Register</a>
         </td>
     </tr>
 </table>
