@@ -12,7 +12,14 @@
     <title>Title</title>
 </head>
 <body>
-
+<table align="center">
+    <tr>
+        <td><a href="DangNhap">Login</a>
+        </td>
+        <td><a href="DangKy">Register</a>
+        </td>
+    </tr>
+</table>
 <a href="/viewsanpham"> click view Sản Phẩm</a>
 <a href="/viewkhachhang"> click view Khách Hàng</a>
 <a href="/search">Tìm Kiếm san phẩm</a>

@@ -12,33 +12,24 @@ public class KhachHang {
     private String ngSinh;
     private int taiKhoan;
 
-<<<<<<< HEAD
-    public KhachHang(int maKh, String tenKh, String diaChi, String SDT, String ngSinh, String taiKhoan) {
-=======
-    public KhachHang(String tenKh, String diaChi, String SDT, String ngSinh, int taiKhoan) {
->>>>>>> origin/main
-        this.maKh = maKh;
-        this.tenKh = tenKh;
-        this.diaChi = diaChi;
-        this.SDT = SDT;
-        this.ngSinh = ngSinh;
-        this.taiKhoan = taiKhoan;
-    }
-
-    public KhachHang() {
+    @Override
+    public String toString() {
+        return "KhachHang{" +
+                "maKh=" + maKh +
+                ", tenKh='" + tenKh + '\'' +
+                ", diaChi='" + diaChi + '\'' +
+                ", SDT='" + SDT + '\'' +
+                ", ngSinh='" + ngSinh + '\'' +
+                ", taiKhoan=" + taiKhoan +
+                '}';
     }
 
     public int getMaKh() {
         return maKh;
     }
 
-<<<<<<< HEAD
-    public void setMaKh(int idKh) {
-        this.maKh = idKh;
-=======
     public void setMaKh(int maKh) {
         this.maKh = maKh;
->>>>>>> origin/main
     }
 
     public String getTenKh() {
@@ -81,15 +72,16 @@ public class KhachHang {
         this.taiKhoan = taiKhoan;
     }
 
-    @Override
-    public String toString() {
-        return "KhachHang{" +
-                "maKh='" + maKh + '\'' +
-                ", tenKh='" + tenKh + '\'' +
-                ", diaChi='" + diaChi + '\'' +
-                ", SDT='" + SDT + '\'' +
-                ", ngSinh='" + ngSinh + '\'' +
-                ", taiKhoan='" + taiKhoan + '\'' +
-                '}';
+    public KhachHang(int anInt, String string, String rsString, String s, String string1, int rsInt) {
     }
+
+    public KhachHang(String tenKh, String diaChi, String SDT, String ngSinh, int taiKhoan) {
+        this.tenKh = tenKh;
+        this.diaChi = diaChi;
+        this.SDT = SDT;
+        this.ngSinh = ngSinh;
+        this.taiKhoan = taiKhoan;
+    }
+
+
 }
