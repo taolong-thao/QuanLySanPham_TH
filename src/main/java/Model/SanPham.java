@@ -5,7 +5,7 @@ package Model;
  * @author dfean
  */
 public class SanPham {
-    private String maSp;
+    private int maKh;
     private String tenSp;
     private String moTa;
     private Long giaBan;
@@ -14,20 +14,20 @@ public class SanPham {
     public SanPham() {
     }
 
-    public SanPham(String maSp, String tenSp, String moTa, Long giaBan, int soLuong) {
-        this.maSp = maSp;
+    public SanPham(int maKh, String tenSp, String moTa, Long giaBan, int soLuong) {
+        this.maKh = maKh;
         this.tenSp = tenSp;
         this.moTa = moTa;
         this.giaBan = giaBan;
         this.soLuong = soLuong;
     }
 
-    public String getMaSp() {
-        return maSp;
+    public int getMaSp() {
+        return maKh;
     }
 
-    public void setMaSp(String maSp) {
-        this.maSp = maSp;
+    public void setMaSp(int idSp) {
+        this.maKh = idSp;
     }
 
     public String getTenSp() {
@@ -65,7 +65,7 @@ public class SanPham {
     @Override
     public String toString() {
         return "SanPham{" +
-                "maSp='" + maSp + '\'' +
+                "maSp='" + maKh + '\'' +
                 ", tenSp='" + tenSp + '\'' +
                 ", moTa='" + moTa + '\'' +
                 ", giaBan=" + giaBan +

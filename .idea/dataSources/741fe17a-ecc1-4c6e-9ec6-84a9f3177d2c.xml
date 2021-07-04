@@ -937,18 +937,17 @@ SELECT|sys.sys_config
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="293" parent="288" name="MaKH">
+    <column id="293" parent="288" name="MaSP">
       <Position>2</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <Collation>armscii8_bin</Collation>
     </column>
-    <column id="294" parent="288" name="MaSP">
+    <column id="294" parent="288" name="MaKH">
       <Position>3</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <Collation>armscii8_bin</Collation>
     </column>
     <column id="295" parent="288" name="SoLuong">
       <Position>4</Position>
@@ -960,12 +959,12 @@ SELECT|sys.sys_config
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="297" parent="288" name="MaKH">
-      <ColNames>MaKH</ColNames>
+    <index id="297" parent="288" name="MaSP">
+      <ColNames>MaSP</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="298" parent="288" name="MaSP">
-      <ColNames>MaSP</ColNames>
+    <index id="298" parent="288" name="MaKH">
+      <ColNames>MaKH</ColNames>
       <Type>btree</Type>
     </index>
     <key id="299" parent="288" name="PRIMARY">
@@ -973,102 +972,128 @@ SELECT|sys.sys_config
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="289" name="MaKH">
+    <foreign-key id="300" parent="288" name="hoadon_ibfk_1">
+      <ColNames>MaSP</ColNames>
+      <RefTableName>sanpham</RefTableName>
+      <RefColNames>MaSP</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="301" parent="288" name="hoadon_ibfk_2">
+      <ColNames>MaKH</ColNames>
+      <RefTableName>khachhang</RefTableName>
+      <RefColNames>MaKH</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="302" parent="289" name="MaKH">
       <Position>1</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <Collation>armscii8_bin</Collation>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="301" parent="289" name="TenKH">
+    <column id="303" parent="289" name="TenKH">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="302" parent="289" name="DiaChi">
+    <column id="304" parent="289" name="DiaChi">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="303" parent="289" name="SDT">
+    <column id="305" parent="289" name="SDT">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Collation>armscii8_bin</Collation>
     </column>
-    <column id="304" parent="289" name="NgaySinh">
+    <column id="306" parent="289" name="NgaySinh">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Collation>armscii8_bin</Collation>
     </column>
-    <column id="305" parent="289" name="TaiKhoan">
+    <column id="307" parent="289" name="TaiKhoan">
       <Position>6</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <Collation>armscii8_bin</Collation>
     </column>
-    <index id="306" parent="289" name="TaiKhoan">
+    <index id="308" parent="289" name="TaiKhoan">
       <ColNames>TaiKhoan</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="307" parent="289" name="PRIMARY">
+    <key id="309" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MaKH</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="308" parent="290" name="MaSP">
+    <foreign-key id="310" parent="289" name="khachhang_ibfk_1">
+      <ColNames>TaiKhoan</ColNames>
+      <RefTableName>taikhoan</RefTableName>
+      <RefColNames>Id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="311" parent="290" name="MaSP">
       <Position>1</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <Collation>armscii8_bin</Collation>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="309" parent="290" name="TenSP">
+    <column id="312" parent="290" name="TenSP">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Collation>utf32_vietnamese_ci</Collation>
     </column>
-    <column id="310" parent="290" name="MoTa">
+    <column id="313" parent="290" name="MoTa">
       <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>varchar(1000)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="311" parent="290" name="GiaBan">
+    <column id="314" parent="290" name="GiaBan">
       <Position>4</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="312" parent="290" name="SoLuong">
+    <column id="315" parent="290" name="SoLuong">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="313" parent="290" name="PRIMARY">
+    <key id="316" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MaSP</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="314" parent="291" name="UserName">
+    <column id="317" parent="291" name="Id">
       <Position>1</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <Collation>armscii8_bin</Collation>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="315" parent="291" name="Password">
+    <column id="318" parent="291" name="UserName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Collation>armscii8_bin</Collation>
     </column>
-    <column id="316" parent="291" name="Role">
+    <column id="319" parent="291" name="Password">
       <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Collation>armscii8_bin</Collation>
+    </column>
+    <column id="320" parent="291" name="Role">
+      <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Collation>armscii8_bin</Collation>
     </column>
-    <key id="317" parent="291" name="PRIMARY">
+    <key id="321" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>UserName</ColNames>
+      <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

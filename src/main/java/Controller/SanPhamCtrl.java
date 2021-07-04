@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 import Model.SanPham;
 import Service.SanPhamSv;
 
-@WebServlet(name = "SanPhamCtrl", value = "")
+@WebServlet(name = "SanPhamCtrl", value = "/viewsanpham")
 public class SanPhamCtrl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         SanPhamSv sp = new SanPhamSv();
         List<SanPham> listsp = sp.getAll();
         request.setAttribute("spsv", listsp);
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("viewsanpham.jsp").forward(request, response);
     }
 
     @Override

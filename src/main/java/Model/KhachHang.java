@@ -5,14 +5,14 @@ package Model;
  * @author dfean
  */
 public class KhachHang {
-    private String maKh;
+    private int maKh;
     private String tenKh;
     private String diaChi;
     private String SDT;
     private String ngSinh;
     private String taiKhoan;
 
-    public KhachHang(String maKh, String tenKh, String diaChi, String SDT, String ngSinh, String taiKhoan) {
+    public KhachHang(int maKh, String tenKh, String diaChi, String SDT, String ngSinh, String taiKhoan) {
         this.maKh = maKh;
         this.tenKh = tenKh;
         this.diaChi = diaChi;
@@ -24,12 +24,12 @@ public class KhachHang {
     public KhachHang() {
     }
 
-    public String getMaKh() {
+    public int getMaKh() {
         return maKh;
     }
 
-    public void setMaKh(String maKh) {
-        this.maKh = maKh;
+    public void setMaKh(int idKh) {
+        this.maKh = idKh;
     }
 
     public String getTenKh() {

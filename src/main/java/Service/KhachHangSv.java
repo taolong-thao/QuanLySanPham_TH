@@ -21,7 +21,7 @@ public class KhachHangSv {
             String sql = "Select * from khachhang";
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
-                KhachHang kh = new KhachHang(rs.getString(1), rs.getString(2),
+                KhachHang kh = new KhachHang(rs.getInt(1), rs.getString(2),
                         rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
                 list.add(kh);
             }
@@ -30,6 +30,17 @@ public class KhachHangSv {
         }
         return list;
     }
+//
+//    public void deleteKh(int idKh) {
+//        String sql = "delete  from khachhang where idKh=?";
+//        try {
+//            PreparedStatement st = Connection.connection().prepareStatement(sql);
+//            st.setInt(1, idKh);
+//            st.executeUpdate();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static void main(String[] args) throws SQLException {
         KhachHangSv a = new KhachHangSv();
