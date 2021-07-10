@@ -19,7 +19,7 @@ import Model.TaiKhoan;
 public class TaiKhoanSv {
     public TaiKhoan checkLogin(String username, String password) {
         try {
-            String query = "select * from taikhoan where username = ? and password = ?";
+            String query = "select * from taikhoan where UserName = ? and Password = ?";
             PreparedStatement ps = Connection.connection().prepareStatement(query);
             ps.setString(1, username);
             ps.setString(2, password);
