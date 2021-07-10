@@ -19,13 +19,13 @@ import Model.TaiKhoan;
 public class TaiKhoanSv {
     public TaiKhoan checkLogin(String username, String password) {
         try {
-            String query = "select * from taikhoan where username = ? and password = ?";
+            String query = "select * from taikhoan where UserName = ? and Password = ?";
             PreparedStatement ps = Connection.connection().prepareStatement(query);
             ps.setString(1, username);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                TaiKhoan a = new TaiKhoan(rs.getString(1), rs.getString(2));
+                TaiKhoan a = new TaiKhoan(0, rs.getString(1), rs.getString(2), "user");
                 return a;
             }
         } catch (Exception e) {
