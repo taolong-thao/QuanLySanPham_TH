@@ -25,7 +25,7 @@ public class TaiKhoanSv {
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                TaiKhoan a = new TaiKhoan(rs.getString(1), rs.getString(2));
+                TaiKhoan a = new TaiKhoan(0, rs.getString(1), rs.getString(2), "user");
                 return a;
             }
         } catch (Exception e) {

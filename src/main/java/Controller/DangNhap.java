@@ -30,15 +30,17 @@ public class DangNhap extends HttpServlet{
             TaiKhoanSv taiKhoanSv = new TaiKhoanSv();
             TaiKhoan a = taiKhoanSv.checkLogin(username, password);
             if(a == null)
-                response.sendRedirect("DangNhap.jsp");
+            {
+                response.sendRedirect("/DangNhap");
+            }
             else
             {
                 if(a.getRole() == "user")
-                    response.sendRedirect("viewsanpham.jsp");
+                    response.sendRedirect("/viewsanpham");
                 else if(a.getRole() == "admin")
-                    response.sendRedirect("AdminControl.jsp");
+                    response.sendRedirect("/AdminControl");
                 else
-                    response.sendRedirect("DangNhap.jsp");
+                    response.sendRedirect("/DangNhap");
             }
         }catch(Exception e){}
     }
