@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Thanh Cong
-  Date: 7/10/2021
-  Time: 9:05 PM
+  Date: 7/11/2021
+  Time: 9:50 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Manager</title>
+    <title>Detail Sản Phẩm</title>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -34,24 +34,6 @@
 
 </head>
 <body>
-
-<div class="header-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="user-menu">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-                        <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                        <li><a href="manager.html"><i class="fa fa-user"></i> My Cart</a></li>
-                        <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
-                        <li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> <!-- End header area -->
 
 <div class="site-branding-area">
     <div class="container">
@@ -79,12 +61,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="index.jsp">Home</a></li>
-                    <li  ><a href="shop.jsp">Shop page</a></li>
-                    <li ><a href="single-product.jsp">Single product</a></li>
-                    <li><a href="cart.jsp">Cart</a></li>
-                    <li><a href="checkout.jsp">Checkout</a></li>
-                    <li class="active"><a href="manager.jsp">Manager</a></li>
-                    <li ><a href="update.jsp">Update</a></li>
+                    <li  class="active"><a href="detailsanpham.jsp">Detail Sản Phẩm</a></li>
                 </ul>
             </div>
         </div>
@@ -102,46 +79,7 @@
         </div>
     </div>
 </div>
-<div class="col-sm-8"><h2>Quản Lý Khách Hàng</h2></div>
 
-</div>
-</div>
-<table class="table table-striped table-hover table-bordered">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Mã Khách Hàng</th>
-        <th>Tên Khách Hàng</th>
-        <th>Số Điện Thoại</th>
-        <th>Địa Chỉ</th>
-        <th>Ngày Sinh</th>
-        <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${listP}" var="o">
-        <tr>
-            <td>
-                                    <span class="custom-checkbox">
-                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                        <label for="checkbox1"></label>
-                                    </span>
-            </td>
-            <td>$list.maKh}</td>
-            <td>$list.tenKh}</td>
-            <td>$list.SDT}</td>
-            <td>$list.diaChi}</td>
-            <td>$list.ngSinh}</td>
-            <td>
-                <a href="update?sp=${list.maSp}"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">Update</i></a>
-                <a href="delete?sp=${list.maSp}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">Delete</i></a>
-            </td>
-        </tr>
-    </c:forEach>
-
-    </tbody>
-</table>
-<div class="col-sm-8"><h2>Quản Lý Sản Phẩm</h2></div>
 <table class="table table-striped table-hover table-bordered">
     <thead>
     <tr>
@@ -150,43 +88,30 @@
         <th>Tên Sản Phẩm</th>
         <th>Mô Tả</th>
         <th>Giá Bán </th>
-        <th>Số Lượng</th>
-        <th>Thông Tin </th>
-        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${listP}" var="o">
-        <tr>
-            <td>
-                                    <span class="custom-checkbox">
-                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                        <label for="checkbox1"></label>
-                                    </span>
-            </td>
-            <td>${list.maSp}</td>
-            <td>${list.tenSp}</td>
-            <td>${list.moTa}</td>
-            <td>${list.giaBan}</td>
-            <td>${list.soluong}</td>
-            <td><a href="detail?sp=${list.maSp}"> Detail</a> </td>
-            <td>
-                <a href="update?sp=${list.maSp}"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">Update</i></a>
-                <a href="delete?sp=${list.maSp}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">Delete</i></a>
-            </td>
-        </tr>
-    </c:forEach>
-
+    <tr>
+        <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                    <label for="checkbox1"></label>
+                                </span>
+        </td>
+        <td>${sp.maSp}</td>
+        <td>${sp.tenSp}</td>
+        <td>${sp.moTa}</td>
+        <td>${sp.giaBan}</td>
+    </tr>
     </tbody>
 </table>
-
 <div class="footer-top-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
-                    <h2>u<span>Stora</span></h2>
+                    <h2><span>LapTop</span></h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
                     <div class="footer-social">
                         <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>

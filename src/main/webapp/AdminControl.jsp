@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Thanh Cong
-  Date: 7/10/2021
-  Time: 9:06 PM
+  Date: 7/11/2021
+  Time: 9:49 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>AdminControl</title>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -40,7 +40,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="index.jsp"><img height="50px" src="img/logo.png"></a></h1>
+                    <h1><a href="index.jsp"><img src="img/logo.png"></a></h1>
                 </div>
             </div>
         </div>
@@ -60,57 +60,17 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.jsp">Home</a></li>
-                    <li><a href="detailsanpham.html">Detail Sản Phẩm</a></li>
-                    <li><a href="cart.jsp">Cart</a></li>
-                    <li><a href="checkout.jsp">Checkout</a></li>
+                    <li><a href="index.jsp">Home</a></li>
+                    <li  class="active"><a href="shop.jsp">AdminControl</a></li>
+                    <li><a href="viewkhachhang.jsp">View Khách Hàng</a></li>
+                    <li><a href="searchsanpham.jsp">Tìm Kiếm Sản Phẩm</a></li>
+                    <li><a href="searchkh.jsp">Tìm Kiếm Khách Hàng</a></li>
+
                 </ul>
             </div>
         </div>
     </div>
 </div> <!-- End mainmenu area -->
-
-<div class="slider-area">
-    <!-- Slider -->
-    <div class="block-slider block-slider4">
-        <ul  id="bxslider-home4">
-            <li>
-                <img src="img/h4-slide.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        DELL <span class="primary"> <strong>XPS</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">Laptop Gaming</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="img/h4-slide2.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        by one, get one <span class="primary">50% <strong>off</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">school supplies & backpacks.*</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="img/h4-slide3.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>MacBook</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">Select Item</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="img/h4-slide4.png" alt="Slide">
-                <div class="caption-group">
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!-- ./Slider -->
-</div> <!-- End slider area -->
 
 <div class="maincontent-area">
     <div class="zigzag-bottom"></div>
@@ -365,7 +325,7 @@
             </div>
         </div>
     </div>
-</div> <!-- End product widget area -->
+</div>
 
 <div class="footer-top-area">
     <div class="zigzag-bottom"></div>
@@ -373,7 +333,7 @@
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
-                    <h2><span>Laptop</span></h2>
+                    <h2><span>LapTop</span></h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
                     <div class="footer-social">
                         <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -388,11 +348,11 @@
                 <div class="footer-menu">
                     <h2 class="footer-wid-title">User Navigation </h2>
                     <ul>
-                        <li><a href="#">My account</a></li>
-                        <li><a href="#">Order history</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">Vendor contact</a></li>
-                        <li><a href="#">Front page</a></li>
+                        <li><a href="">My account</a></li>
+                        <li><a href="">Order history</a></li>
+                        <li><a href="">Wishlist</a></li>
+                        <li><a href="">Vendor contact</a></li>
+                        <li><a href="">Front page</a></li>
                     </ul>
                 </div>
             </div>
@@ -401,11 +361,11 @@
                 <div class="footer-menu">
                     <h2 class="footer-wid-title">Categories</h2>
                     <ul>
-                        <li><a href="#">Mobile Phone</a></li>
-                        <li><a href="#">Home accesseries</a></li>
-                        <li><a href="#">LED TV</a></li>
-                        <li><a href="#">Computer</a></li>
-                        <li><a href="#">Gadets</a></li>
+                        <li><a href="">Mobile Phone</a></li>
+                        <li><a href="">Home accesseries</a></li>
+                        <li><a href="">LED TV</a></li>
+                        <li><a href="">Computer</a></li>
+                        <li><a href="">Gadets</a></li>
                     </ul>
                 </div>
             </div>
@@ -415,17 +375,14 @@
                     <h2 class="footer-wid-title">Newsletter</h2>
                     <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
                     <div class="newsletter-form">
-                        <form action="#">
-                            <input type="email" placeholder="Type your email">
-                            <input type="submit" value="Subscribe">
-                        </form>
+                        <input type="email" placeholder="Type your email">
+                        <input type="submit" value="Subscribe">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div> <!-- End footer top area -->
-
+</div>
 <div class="footer-bottom-area">
     <div class="container">
         <div class="row">
@@ -445,7 +402,7 @@
             </div>
         </div>
     </div>
-</div> <!-- End footer bottom area -->
+</div>
 
 <!-- Latest jQuery form server -->
 <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -462,9 +419,5 @@
 
 <!-- Main Script -->
 <script src="js/main.js"></script>
-
-<!-- Slider -->
-<script type="text/javascript" src="js/bxslider.min.js"></script>
-<script type="text/javascript" src="js/script.slider.js"></script>
 </body>
 </html>

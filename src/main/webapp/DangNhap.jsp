@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Đăng Nhập</title>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -58,30 +58,13 @@
 </head>
 <body>
 
-<div class="header-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="user-menu">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-                        <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                        <li><a href="manager.html"><i class="fa fa-user"></i> My Cart</a></li>
-                        <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
-                        <li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> <!-- End header area -->
 
 <div class="site-branding-area">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img height="50px" src="img/logo.png"></a></h1>
+                    <h1><a href="index.jsp"><img height="50px" src="img/logo.png"></a></h1>
                 </div>
             </div>
         </div>
@@ -100,13 +83,6 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li ><a href="shop.jsp">Shop page</a></li>
-                    <li ><a href="single-product.jsp">Single product</a></li>
-                    <li><a href="cart.jsp">Cart</a></li>
-                    <li><a href="checkout.jsp">Checkout</a></li>
-                    <li ><a href="manager.jsp">Manager</a></li>
-                    <li ><a href="update.jsp">Update</a></li>
                 </ul>
             </div>
         </div>
@@ -114,13 +90,13 @@
 </div> <!-- End mainmenu area -->
 
 <div class="login-form">
-    <form action="/examples/actions/confirmation.php" method="post">
-        <h2 class="text-center">Log in</h2>
+    <form action="dangnhap" method="post">
+        <h2 class="text-center">Đăng Nhập</h2>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Username" required="required">
+            <input type="username" id="username" name="username" class="form-control" placeholder="Username" required="required">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" required="required">
+            <input type="password" class="form-control"  id="pwd" name="password" placeholder="Password" required="required">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Log in</button>
@@ -130,7 +106,7 @@
             <a href="#" class="float-right">Forgot Password?</a>
         </div>
     </form>
-    <p class="text-center"><a href="register.html">Create an Account</a></p>
+    <p class="text-center"><a href="DangKy.jsp">Create an Account</a></p>
 </div><!-- End footer top area -->
 
 <div class="footer-bottom-area">

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Thanh Cong
-  Date: 7/10/2021
-  Time: 9:06 PM
+  Date: 7/11/2021
+  Time: 10:00 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shop</title>
+    <title>View Sản Phẩm</title>
 
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -34,31 +34,12 @@
 
 </head>
 <body>
-
-<div class="header-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="user-menu">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-                        <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                        <li><a href="manager.html"><i class="fa fa-user"></i> My Cart</a></li>
-                        <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
-                        <li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> <!-- End header area -->
-
 <div class="site-branding-area">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img src="img/logo.png"></a></h1>
+                    <h1><a href="index.jsp"><img src="img/logo.png"></a></h1>
                 </div>
             </div>
         </div>
@@ -79,12 +60,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="index.jsp">Home</a></li>
-                    <li  class="active"><a href="shop.jsp">Shop page</a></li>
-                    <li ><a href="single-product.jsp">Single product</a></li>
-                    <li><a href="cart.jsp">Cart</a></li>
-                    <li><a href="checkout.jsp">Checkout</a></li>
-                    <li><a href="manager.jsp">Manager</a></li>
-                    <li ><a href="update.jsp">Update</a></li>
+                    <li><a href="viewsanpham.jsp">View Sản Phẩm </a></li>
                 </ul>
             </div>
         </div>
@@ -103,20 +79,6 @@
     </div>
 </div>
 
-
-<div class="single-product-area">
-    <div class="zigzag-bottom"></div>
-    <div class="container">
-        <div class="col-sm-4">
-            <div class="search-box">
-                <form action="search" method="get">
-                    <input type="text" name="ten" value="Nhập Mã Sản Phẩm" >
-                    <input type="submit" value="Search">
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <table class="table table-striped table-hover table-bordered">
     <thead>
     <tr>
@@ -126,10 +88,13 @@
         <th>Mô Tả</th>
         <th>Giá Bán </th>
         <th>Số Lượng </th>
+        <th>Detail</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${listsearch}" var="list">
+    <c:forEach items="${spsv}" var="list">
         <tr>
             <td>
                                 <span class="custom-checkbox">
@@ -142,38 +107,22 @@
             <td>${list.moTa}</td>
             <td>${list.giaBan}</td>
             <td>${list.soLuong}</td>
+            <td><a href="detail?sp=${list.maSp}">Detail</a></td>
+            <td><a href="update?sp=${list.maSp}">Update</a></td>
+            <td><a href="delete?sp=${list.maSp}">Delete</a></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-<table class="table table-striped table-hover table-bordered">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Mã Sản Phẩm</th>
-        <th>Tên Sản Phẩm</th>
-        <th>Mô Tả</th>
-        <th>Giá Bán </th>
-        <th>Số Lượng </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                    <label for="checkbox1"></label>
-                                </span>
-        </td>
-        <td>${sp.maSp}</td>
-        <td>${sp.tenSp}</td>
-        <td>${sp.moTa}</td>
-        <td>${sp.giaBan}</td>
-        <td>${sp.soLuong}</td>
-    </tr>
-    </tbody>
-</table>
-
+<a href="addSanPham.jsp"> Thêm Sản Phẩm</a>
+<%--<script>--%>
+<%--    function deleteSure(maSp) {--%>
+<%--        var option = confirm("bạn có chắc muôn xóa ");--%>
+<%--        if (option == true) {--%>
+<%--            window.location.href = "delete?sp=" + maSp;--%>
+<%--        }--%>
+<%--    }--%>
+<%--</script>--%>
 <div class="footer-top-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
