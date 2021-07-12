@@ -23,8 +23,8 @@
     <th>MOTA</th>
     <th>GIABAN</th>
     <th>SOLUONG</th>
-    <th>UPDATE</th>
-    <th>DELETE</th>
+    <th>DeTail</th>
+
     </thead>
     <tbody>
     <c:forEach items="${listsearch}" var="list">
@@ -34,8 +34,7 @@
             <td>${list.moTa}</td>
             <td>${list.giaBan}</td>
             <td>${list.soLuong}</td>
-            <td><a href="update?sp=${list.maSp}">Update</a></td>
-            <td><a href="delete?sp=${list.maSp}">Delete</a></td>
+            <td><a href="detail?sp=${list.maSp}">Detail</a></td>
         </tr>
     </c:forEach>
     </tbody>

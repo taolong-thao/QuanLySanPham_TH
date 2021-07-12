@@ -13,7 +13,7 @@
 </head>
 <body>
 <form action="searchkh" method="get">
-    <input type="text" name="name" value="tên sp ">
+    <input type="text" name="name" value="tên khách hàng">
     <input type="submit" value="Search">
 </form>
 <table border="1">
