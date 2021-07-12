@@ -32,9 +32,9 @@ public class DangNhap extends HttpServlet {
             if (a == null)
                 response.sendRedirect("DangNhap.jsp");
             else {
-                if (a.getRole() == "User")
-                    response.sendRedirect("viewsanpham.jsp");
-                else if (a.getRole() == "admin")
+                if (a.getRole().equals("user"))
+                    response.sendRedirect("viewspuser");
+                 else if (a.getRole().equals("admin"))
                     response.sendRedirect("AdminControl.jsp");
                 else
                     response.sendRedirect("DangNhap.jsp");
@@ -45,22 +45,6 @@ public class DangNhap extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            TaiKhoanSv taiKhoanSv = new TaiKhoanSv();
-            TaiKhoan a = taiKhoanSv.checkLogin(username, password);
-            if (a == null)
-                response.sendRedirect("DangNhap.jsp");
-            else {
-                if (a.getRole().equals("user"))
-                    response.sendRedirect("viewspuser");
-                else if (a.getRole().equals("admin"))
-                    response.sendRedirect("AdminControl.jsp");
-                else
-                    response.sendRedirect("DangNhap.jsp");
-            }
-        } catch (Exception e) {
-        }
+        
     }
 }
