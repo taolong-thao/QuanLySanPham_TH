@@ -41,6 +41,6 @@ public class DangKy extends HttpServlet {
         TaiKhoan a = taiKhoanSv.dkTaiKhoan(temp, username, password, "User");
         KhachHangSv khachHangSv = new KhachHangSv();
         khachHangSv.dkKhachHang(temp, tenKh, diaChi, SDT, ngSinh, a.getKey());
-        response.sendRedirect("/index");
+        response.sendRedirect("index.jsp");
     }
 }

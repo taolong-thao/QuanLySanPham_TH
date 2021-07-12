@@ -1,5 +1,18 @@
 
-i
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(×ƒÈ„øÿÿÿÿ8Íì»¦/
-U	java:S106("9Replace this use of System.out or System.err by a logger.(÷¹§µ8Õé»¦/
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï¹ÈÔûÿÿÿÿ
+i
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(×ƒÈ„øÿÿÿÿ8Íì»¦/
+o	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âîƒ‡şÿÿÿÿ8÷’ôß¦/
+i
+java:S2095a"GUse try-with-resources or close this "Statement" in a "finally" clause.(×ƒÈ„øÿÿÿÿ8ªÀŒã¦/
+q
+java:S2095F"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ïšƒëüÿÿÿÿ8óÎ®á¦/
+q
+java:S2095U"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ïšƒëüÿÿÿÿ8û›ùß¦/
+r	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âîƒ‡şÿÿÿÿ8÷’ôß¦/
+i
+java:S20957"GUse try-with-resources or close this "Statement" in a "finally" clause.(×ƒÈ„øÿÿÿÿ8¯ºùß¦/
+q
+java:S2095("OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ïšƒëüÿÿÿÿ8éÕŞŞ¦/
+
+java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘8³ğµú¦/
