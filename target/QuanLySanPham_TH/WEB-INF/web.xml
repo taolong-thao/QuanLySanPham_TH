@@ -6,4 +6,20 @@
          xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
+    <servlet>
+    <servlet-name>DangNhap</servlet-name>
+    <servlet-class>com.example.DangNhap</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DangNhap</servlet-name>
+    <url-pattern>/DangNhap</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>DangKy</servlet-name>
+    <servlet-class>com.example.DangKy</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DangKy</servlet-name>
+    <url-pattern>/DangKy</url-pattern>
+</servlet-mapping>
 </web-app>
