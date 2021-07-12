@@ -19,14 +19,11 @@ import Model.TaiKhoan;
 public class TaiKhoanSv {
     public TaiKhoan checkLogin(String username, String password) {
         try {
-            String query = "select * from taikhoan where UserName = ? and Password = ?";
-            PreparedStatement ps = Connection.connection().prepareStatement(query);
-            ps.setString(1, username);
-            ps.setString(2, password);
-            ResultSet rs = ps.executeQuery();
+            String query = "select * from taikhoan where UserName = '"+username+"' and Password = '"+password+"'";
+            Statement st = Connection.connection().createStatement();
+            ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
-                TaiKhoan a = new TaiKhoan(0, rs.getString(1), rs.getString(2), "user");
-                return a;
+                return new TaiKhoan(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4));
             }
         } catch (Exception e) {
         }
@@ -36,7 +33,7 @@ public class TaiKhoanSv {
 
     public TaiKhoan dkTaiKhoan(int a, String username, String password, String b) {
         TaiKhoan taiKhoan = new TaiKhoan(a, username, password, b);
-        String query = "insert into taikhoan values (?,?, ?, ?)";
+        String query = "insert into taikhoan values (?, ?, ?, ?)";
         try {
             PreparedStatement ps = Connection.connection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, taiKhoan.getId());
