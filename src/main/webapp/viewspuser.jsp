@@ -8,42 +8,42 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-<table border="1">
-    <thead>
-    <th>MASP</th>
-    <th>TENSP</th>
-    <th>MOTA</th>
-    <th>GIABAN</th>
-    <th>SOLUONG</th>
-    <th>DeTail</th>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    </thead>
-    <tbody>
-    <c:forEach items="${spsv}" var="list">
-        <tr>
-            <td>${list.maSp}</td>
-            <td>${list.tenSp}</td>
-            <td>${list.moTa}</td>
-            <td>${list.giaBan}</td>
-            <td>${list.soLuong}</td>
-            <td><a href="detail?sp=${list.maSp}">Detail</a></td>
+        <title>View Product User</title>
+    </head>
+    <body>
+    <center>
+        <div class="panel-heading">
+            <h2 class="text-center">View Product</h2>
+        </div>
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th scope="col">Code Product</th>
+                    <th scope="col">Name Product</th>
+                    <th scope="col">Description Product</th>
+                    <th scope="col">Price Product</th>
+                    <th scope="col">Amount Product</th>
+                    <th scope="col">DETAIL</th>
 
-        </tr>
-    </c:forEach>
-    </tbody>
-    <a href="/searchsanpham.jsp">Search sản phẩm</a>
-</table>
-<%--<script>--%>
-<%--    function deleteSure(maSp) {--%>
-<%--        var option = confirm("bạn có chắc muôn xóa ");--%>
-<%--        if (option == true) {--%>
-<%--            window.location.href = "delete?sp=" + maSp;--%>
-<%--        }--%>
-<%--    }--%>
-<%--</script>--%>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${spsv}" var="list">
+                    <tr>
+                        <td>${list.maSp}</td>
+                        <td>${list.tenSp}</td>
+                        <td>${list.moTa}</td>
+                        <td>${list.giaBan}</td>
+                        <td>${list.soLuong}</td>
+                        <td><a class="btn btn-success" href="detail?sp=${list.maSp}">Detail</a></td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+        <a class="btn btn-primary" href="/searchsanpham.jsp">Search sản phẩm</a>
+    </center>
 </body>
 </html>
