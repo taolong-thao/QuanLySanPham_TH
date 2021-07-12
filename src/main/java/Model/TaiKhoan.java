@@ -27,6 +27,11 @@ public class TaiKhoan {
     public TaiKhoan() {
     }
 
+    public TaiKhoan(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public TaiKhoan(int id, String username, String password, String role) {
         this.id = id;
         this.username = username;

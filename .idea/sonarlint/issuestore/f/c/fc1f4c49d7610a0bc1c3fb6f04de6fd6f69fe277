@@ -1,14 +1,14 @@
 
 [
-java:S4973%"9Use the "equals" method if value comparison was intended.(±…Ş„ûÿÿÿÿ8Ã¿ôß§/
+java:S49738"9Use the "equals" method if value comparison was intended.(Ûäøòşÿÿÿÿ8Ú´ìü§/
 j
 java:S1192!"MDefine a constant instead of duplicating this literal "DangNhap.jsp" 4 times.(À©ó8Ú´ìü§/
-[
-java:S4973:"9Use the "equals" method if value comparison was intended.(±…Ş„ûÿÿÿÿ8Ú´ìü§/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
 E	java:S108*")Either remove or fill this block of code.(”ı¾8˜Ñî§/
 [
-java:S49738"9Use the "equals" method if value comparison was intended.(Ûäøòşÿÿÿÿ8Ú´ìü§/
-[
 java:S4973#"9Use the "equals" method if value comparison was intended.(Ûäøòşÿÿÿÿ8Ã¿ôß§/
+[
+java:S4973:"9Use the "equals" method if value comparison was intended.(±…Ş„ûÿÿÿÿ8Ú´ìü§/
 E	java:S108?")Either remove or fill this block of code.(”ı¾8Ú´ìü§/
+[
+java:S4973%"9Use the "equals" method if value comparison was intended.(±…Ş„ûÿÿÿÿ8Ã¿ôß§/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î

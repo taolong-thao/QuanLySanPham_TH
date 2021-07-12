@@ -1,10 +1,10 @@
 
+E	java:S1084")Either remove or fill this block of code.(”ı¾8—‹“ƒ§/
 l
 java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¢¶®š8—‹“ƒ§/
-E	java:S1084")Either remove or fill this block of code.(”ı¾8—‹“ƒ§/
-q
-java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ö¤‹şÿÿÿÿ8—‹“ƒ§/
 E	java:S108")Either remove or fill this block of code.(”ı¾8—‹“ƒ§/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï¹ÈÔûÿÿÿÿ
 {
 java:S1488"YImmediately return this expression instead of assigning it to the temporary variable "a".(æñÀúÿÿÿÿ8—‹“ƒ§/
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï¹ÈÔûÿÿÿÿ
+q
+java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ö¤‹şÿÿÿÿ8—‹“ƒ§/
