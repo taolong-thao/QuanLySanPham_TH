@@ -45,7 +45,7 @@
                         <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
                         <li><a href="manager.html"><i class="fa fa-user"></i> My Cart</a></li>
                         <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
-                        <li><a href="login.html"><i class="fa fa-user"></i> Login</a></li>
+                        <li><a href="DangNhap.jsp"><i class="fa fa-user"></i> Login</a></li>
                     </ul>
                 </div>
             </div>

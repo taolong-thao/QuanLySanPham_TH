@@ -34,13 +34,6 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-<form action="searchkh" method="get">
-    <input type="text" name="name" value="tên khách hàng">
-    <input type="submit" value="Search">
-</form>
-<table border="1">
-=======
 
 
 <div class="site-branding-area">
@@ -105,7 +98,6 @@
     </div>
 </div>
 <table class="table table-striped table-hover table-bordered">
->>>>>>> adaa76073bc5a5da8dd6b479bf29d0129091d2ae
     <thead>
     <tr>
         <th>#</th>

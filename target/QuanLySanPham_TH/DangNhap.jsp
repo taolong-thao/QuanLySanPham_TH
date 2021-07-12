@@ -90,7 +90,7 @@
 </div> <!-- End mainmenu area -->
 
 <div class="login-form">
-    <form action="dangnhap" method="post">
+    <form action="DangNhap" method="post">
         <h2 class="text-center">Đăng Nhập</h2>
         <div class="form-group">
             <input type="username" id="username" name="username" class="form-control" placeholder="Username" required="required">
