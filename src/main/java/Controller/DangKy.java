@@ -38,7 +38,7 @@ public class DangKy extends HttpServlet {
         String ngSinh = request.getParameter("ngSinh");
         int temp = 0;
         TaiKhoanSv taiKhoanSv = new TaiKhoanSv();
-        TaiKhoan a = taiKhoanSv.dkTaiKhoan(temp, username, password, "User");
+        TaiKhoan a = taiKhoanSv.dkTaiKhoan(temp, username, password, "user");
         KhachHangSv khachHangSv = new KhachHangSv();
         khachHangSv.dkKhachHang(temp, tenKh, diaChi, SDT, ngSinh, a.getKey());
         response.sendRedirect("index.jsp");

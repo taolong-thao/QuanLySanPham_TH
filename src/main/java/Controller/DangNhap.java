@@ -53,9 +53,15 @@ public class DangNhap extends HttpServlet {
             if (a == null)
                 response.sendRedirect("DangNhap.jsp");
             else {
+<<<<<<< HEAD
+                if (a.getRole().equals("user"))
+                    response.sendRedirect("viewspuser");
+                else if (a.getRole().equals("admin"))
+=======
                 if (a.getRole() == "User")
                     response.sendRedirect("viewsanpham.jsp");
                 else if (a.getRole() == "admin")
+>>>>>>> main
                     response.sendRedirect("AdminControl.jsp");
                 else
                     response.sendRedirect("DangNhap.jsp");
