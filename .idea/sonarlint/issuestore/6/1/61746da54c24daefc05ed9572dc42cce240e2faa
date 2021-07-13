@@ -1,11 +1,0 @@
-
-p
-java:S1989#"SHandle the following exception that could be thrown by "sendRedirect": IOException.(Î’¬8ê½Ÿ„§/
-ƒ
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(‚ÚÑâûÿÿÿÿ8˜Ÿúƒ§/
-v
-java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(ˆÛƒ8¶Ø÷ƒ§/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(äŞş¹
-b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÏĞÛ…
-v
-java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(ˆÛƒ8‘Ç—„§/
