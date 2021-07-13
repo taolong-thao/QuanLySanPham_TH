@@ -8,45 +8,44 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <title>View Product</title>
-    </head>
-    <body>
-
-    <center>
-        <div class="panel-heading">
-            <h2 class="text-center">View Product</h2>
-        </div>
-        <table class="table ">
-            <thead>
-                <tr>
-                    <th scope="col">Code Product</th>
-                    <th scope="col">Name Product</th>
-                    <th scope="col">Description Product</th>
-                    <th scope="col">Price Product</th>
-                    <th scope="col">Amount Product</th>
-                    <th scope="col">DETAIL</th>
-                    <th scope="col">UPDATE</th>
-                    <th scope="col">DELETE</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach items="${spsv}" var="list">
-                    <tr>
-                        <td>${list.maSp}</td>
-                        <td>${list.tenSp}</td>
-                        <td>${list.moTa}</td>
-                        <td>${list.giaBan}</td>
-                        <td>${list.soLuong}</td>
-                        <td><a class="btn btn-success" href="detail?sp=${list.maSp}">Detail</a></td>
-                        <td><a class="btn btn-success" href="update?sp=${list.maSp}">Update</a></td>
-                        <td><a class="btn btn-success" href="delete?sp=${list.maSp}">Delete</a></td>
-                    </tr>
-                </c:forEach>
-            </tbody>
-        </table>
-        <a class="btn btn-primary" href="/addSanPham.jsp"> Thêm Sản Phẩm</a>
-    </center>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <th>MASP</th>
+    <th>TENSP</th>
+    <th>MOTA</th>
+    <th>GIABAN</th>
+    <th>SOLUONG</th>
+    <th>DeTail</th>
+    <th>UPDATE</th>
+    <th>DELETE</th>
+    </thead>
+    <tbody>
+    <c:forEach items="${spsv}" var="list">
+        <tr>
+            <td>${list.maSp}</td>
+            <td>${list.tenSp}</td>
+            <td>${list.moTa}</td>
+            <td>${list.giaBan}</td>
+            <td>${list.soLuong}</td>
+            <td><a href="detail?sp=${list.maSp}">Detail</a></td>
+            <td><a href="update?sp=${list.maSp}">Update</a></td>
+            <td><a href="delete?sp=${list.maSp}">Delete</a></td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
+<a href="/addSanPham.jsp"> Thêm Sản Phẩm</a>
+<%--<script>--%>
+<%--    function deleteSure(maSp) {--%>
+<%--        var option = confirm("bạn có chắc muôn xóa ");--%>
+<%--        if (option == true) {--%>
+<%--            window.location.href = "delete?sp=" + maSp;--%>
+<%--        }--%>
+<%--    }--%>
+<%--</script>--%>
 </body>
 </html>

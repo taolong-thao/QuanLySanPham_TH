@@ -1,0 +1,10 @@
+
+[
+java:S4973%"9Use the "equals" method if value comparison was intended.(±…Ş„ûÿÿÿÿ8Ã¿ôß§/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+[
+java:S4973#"9Use the "equals" method if value comparison was intended.(Ûäøòşÿÿÿÿ8Ã¿ôß§/
+E	java:S108?")Either remove or fill this block of code.(”ı¾8Ú´ìü§/
+E	java:S108*")Either remove or fill this block of code.(”ı¾8˜Ñî§/
+j
+java:S1192!"MDefine a constant instead of duplicating this literal "DangNhap.jsp" 4 times.(À©ó8Ú´ìü§/
