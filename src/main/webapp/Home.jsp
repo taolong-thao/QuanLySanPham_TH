@@ -9,15 +9,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <title>Welcome</title>
     </head>
- 
+
     <body>
         <table align="center">
+              <div class="panel-heading">
+                    <h2 class="text-center">Choose Login or Register</h2>
+                </div>
             <tr>
-                <td><a href="DangNhap">Login</a>
+                <td>
+                    <a class="btn btn-primary" href="DangNhap">Login</a>
                 </td>
-                <td><a href="DangKy">Register</a>
+                <td>
+                    <a class="btn btn-primary" href="DangKy">Register</a>
                 </td>
             </tr>
         </table>
